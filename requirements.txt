@@ -1,0 +1,37 @@
+# =============================================================================
+# requirements.txt — Python Dependencies
+# =============================================================================
+# Install everything with:
+#   pip install -r requirements.txt
+#
+# Versions are pinned (==) to ensure reproducibility across machines.
+# To upgrade a package: change the version and re-run pip install -r requirements.txt
+# =============================================================================
+
+# --- Core orchestration ---
+langchain==0.3.25
+langchain-core==0.3.62
+langchain-community==0.3.24
+langchain-chroma>=0.2.0
+
+# --- LLM providers ---
+langchain-groq==0.3.2         # Groq cloud API (free tier, very fast)
+langchain-ollama==0.3.3       # local LLMs via Ollama (llama3, mistral, etc.)
+langchain-huggingface==0.1.2  # HuggingFace embedding models
+
+# --- Embedding model runner ---
+sentence-transformers==3.4.1  # downloads and runs all-MiniLM-L6-v2 etc.
+torch==2.7.0                  # required by sentence-transformers (CPU build)
+
+# --- Vector database ---
+chromadb>=0.6.0
+
+# --- Document loaders ---
+pypdf==5.5.0           # PDF loading (PyPDFLoader)
+# unstructured==0.17.5   # HTML loading (UnstructuredHTMLLoader) (Not compatible with Python 3.13)
+
+# --- Web UI ---
+streamlit==1.45.1
+
+# --- Utilities ---
+python-dotenv==1.1.0   # loads .env into os.environ

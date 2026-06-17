@@ -1,0 +1,23 @@
+RAG Chatbot System & Capabilities Overview
+
+1. ABOUT THIS CHATBOT
+The RAG (Retrieval-Augmented Generation) Chatbot is an intelligent assistant designed to answer questions based strictly on the collection of documents indexed in its database. 
+It does not rely on external internet searches or pre-trained memory to answer specific factual questions, ensuring that its responses are grounded, accurate, and free from hallucination.
+
+2. WHAT INFORMATION DOES THIS CHATBOT CONTAIN?
+The knowledge base of this chatbot is completely dynamic and depends entirely on the documents (such as text files, PDFs, or HTML pages) that have been placed in the database. 
+Its knowledge is defined exclusively by the uploaded files. It can summarize, extract, and explain any concepts, facts, or data found within those specific files.
+
+3. WHAT TYPES OF QUESTIONS CAN THIS CHATBOT ANSWER?
+Because the chatbot relies strictly on its internal knowledge base, you can ask it detailed, factual, and explanatory questions about the topics covered in the ingested documents. Examples of the types of questions it can answer include:
+- Summarization: "Can you summarize the main points of the provided documents?"
+- Fact-Finding: "What does the document say about [Specific Topic]?"
+- Explanation: "Can you explain how [Concept from Document] works based on the text?"
+- Comparison: "How does the text compare [Concept A] and [Concept B]?"
+
+If you ask a question outside of the scope of the provided documents, the chatbot will respectfully inform you that the information is not available in its knowledge base. It is explicitly instructed not to guess or invent information.
+
+4. TECHNICAL DETAILS
+- Supported LLM Providers: Ollama (local/private), OpenAI, and Groq.
+- Ingestion Pipeline: Loads files, cleans text, splits it into overlapping chunks, embeds them using sentence-transformers, and stores them in ChromaDB.
+- Retrieval Pipeline: Uses semantic search (cosine similarity) to find the most relevant document chunks to inject into the LLM's prompt.
