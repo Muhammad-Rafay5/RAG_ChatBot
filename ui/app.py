@@ -22,6 +22,9 @@
 #   streamlit run ui/app.py
 # =============================================================================
 
+import os
+os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
+
 import sys
 from pathlib import Path
 
