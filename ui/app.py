@@ -30,10 +30,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import streamlit as st
 
-from src.config import APP_TITLE, APP_DESCRIPTION
-from src.embed_index import load_vector_store, get_store_stats
+from src.config import APP_TITLE, APP_DESCRIPTION, DATA_DIR, VECTOR_STORE_DIR
+from src.embed_index import load_vector_store, get_store_stats, build_vector_store
+from src.clean_chunk import run_ingestion_pipeline
 from src.generate import RAGChain, RAGResponse
 from src.utils import get_logger
+
 
 logger = get_logger(__name__)
 
@@ -49,6 +51,17 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+# Auto-ingest if vector store doesn't exist (e.g. on Streamlit Cloud)
+if not VECTOR_STORE_DIR.exists() or not any(VECTOR_STORE_DIR.iterdir()):
+    with st.spinner("Building knowledge base for first time (this takes ~1 min)..."):
+        chunks = run_ingestion_pipeline(DATA_DIR)
+        if chunks:
+            build_vector_store(chunks)
+        else:
+            st.error("Failed to extract data chunks for vector store.")
+            st.stop()
+
 
 
 # =============================================================================

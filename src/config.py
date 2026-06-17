@@ -87,7 +87,7 @@ SIMILARITY_THRESHOLD = float(os.getenv("SIMILARITY_THRESHOLD", "0.2"))
 #
 # Supported model strings: "llama3.2", "mistral", "phi3", "gemma2", etc.
 
-LLM_PROVIDER   = os.getenv("LLM_PROVIDER", "ollama")       # "ollama" or "openai"
+LLM_PROVIDER   = os.getenv("LLM_PROVIDER", "groq")       # "ollama" or "openai"
 OLLAMA_MODEL   = os.getenv("OLLAMA_MODEL", "llama3.2")      # model tag for Ollama
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 

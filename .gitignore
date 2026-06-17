@@ -42,3 +42,5 @@ Thumbs.db
 # --- Model cache (downloaded by sentence-transformers/HuggingFace) ---
 .cache/
 models/
+
+.streamlit/secrets.toml
