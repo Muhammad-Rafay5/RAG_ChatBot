@@ -23,7 +23,7 @@ env/
 .env/
 
 # --- Vector store (large binary files, rebuilt via --ingest) ---
-vector_store/
+# vector_store/
 
 # --- Raw data (often large; document in sources.md instead) ---
 data/raw/
