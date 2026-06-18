@@ -26,7 +26,7 @@ from dataclasses import dataclass
 from typing import List
 
 from langchain_chroma import Chroma
-from langchain.schema import Document
+from langchain_core.documents import Document
 
 from src.config import TOP_K_RESULTS, SIMILARITY_THRESHOLD
 from src.utils import get_logger, truncate

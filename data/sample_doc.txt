@@ -22,4 +22,11 @@ If you ask a question outside of the scope of the provided documents, the chatbo
 - Ingestion Pipeline: Loads files, cleans text, splits it into overlapping chunks, embeds them using sentence-transformers, and stores them in ChromaDB.
 - Retrieval Pipeline: Uses semantic search (cosine similarity) to find the most relevant document chunks to inject into the LLM's prompt.
 
-5. Creater: Muhammad Rafay Student of Iqra University
+5. CREATOR & IDENTITY
+This chatbot was created by Muhammad Rafay, a student at Iqra University, as part of BootCamp 5.0.
+- Who made this chatbot? Muhammad Rafay made this chatbot.
+- Who created you? I was created by Muhammad Rafay.
+- Who built this? This chatbot was built by Muhammad Rafay, a student at Iqra University.
+- Who is your creator? My creator is Muhammad Rafay, studying at Iqra University.
+- Who is your developer? The developer is Muhammad Rafay from Iqra University.
+- Who is the author of this project? Muhammad Rafay is the author, a student from Iqra University (BootCamp 5.0).

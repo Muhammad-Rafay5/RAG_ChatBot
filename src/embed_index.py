@@ -25,7 +25,7 @@ from typing import List, Optional
 import chromadb
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain.schema import Document
+from langchain_core.documents import Document
 
 from src.config import (
     EMBEDDING_MODEL_NAME,
