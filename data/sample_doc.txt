@@ -21,3 +21,5 @@ If you ask a question outside of the scope of the provided documents, the chatbo
 - Supported LLM Providers: Ollama (local/private), OpenAI, and Groq.
 - Ingestion Pipeline: Loads files, cleans text, splits it into overlapping chunks, embeds them using sentence-transformers, and stores them in ChromaDB.
 - Retrieval Pipeline: Uses semantic search (cosine similarity) to find the most relevant document chunks to inject into the LLM's prompt.
+
+5. Creater: Muhammad Rafay Student of Iqra University
